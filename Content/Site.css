@@ -1,0 +1,201 @@
+﻿body {
+    /*padding-top: 50px;*/
+    padding-bottom: 20px;
+    background: url(images/bgImageMain.jpg) no-repeat center top;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top:15px;
+    margin-top:1.5vh; 
+    background-color: mistyrose;
+    opacity: 0.95;
+    border: 2px solid cadetblue;
+    border-radius: 25px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.partyheader {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    background: linear-gradient(to right,#80b3ff  0%, #009999 33%, #009999 66%, #80b3ff 100%);
+    /*cadetblue;*/
+    opacity: 0.9;
+}
+    .partyheader h1 {
+        text-align: center;
+        font-size: 4em;
+        font-family: cursive;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-shadow: 2px 2px 5px #ffb3b3;
+    }
+
+
+.body-content a {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: cursive;
+    text-decoration: none;
+}
+
+.body-content a:hover {
+        text-decoration:none;
+    }
+
+.body-content form {
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: cursive !important;
+}
+
+.body-content select, input {
+    width: 100%;
+    border: 1px solid cadetblue;
+    border-radius: 5px;
+    font-size: 1em !important;
+    font-weight: bold !important;
+    font-family: cursive !important;
+    
+}
+.body-content input:hover {
+        color: darkcyan;
+    }
+
+.col-md-9 input{
+    
+    border: 1px solid cadetblue;
+    border-radius: 5px;
+}
+
+hr {
+    border-top: 1px solid cadetblue !important;
+}
+
+.body-content h3{
+    
+    font-size: 3em;
+    font-weight:bold;
+    font-family: cursive;
+}
+
+.body-content th {
+    font-size: 1.5em !important;
+    font-weight: bold;
+    font-family: cursive !important;
+}
+
+.body-content td {
+    font-size: 1.2em !important;
+    font-weight: 300;
+    font-family: cursive !important;
+}
+
+.body-content dt {
+    font-size: 1.3em !important;
+    font-weight: bold;
+    font-family: cursive !important;
+    line-height: 2;
+}
+
+.body-content dd {
+    font-size: 1.2em !important;
+    font-weight: 300;
+    font-family: cursive !important;
+    line-height: 2;
+}
+
+.body-content img {
+    border: 1px hidden;
+    border-radius: 20px;
+
+}
+
+
+/*Media Qeries*/
+
+@media (max-width: 1024px) and (min-width:768px){
+    .body-content select,input{
+        display: block !important;
+        padding-bottom:1px;
+    }
+
+    .body-content input[type="submit"]{
+        background-color: ButtonFace !important;    
+    }
+
+    .body-content p{
+        font-size: 1.2em;
+    }
+    td a {
+        font-size: 1.2em !important;
+    }
+ }
+
+@media only screen and (max-width: 760px){
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody,th, td, tr {
+        display: block;
+    }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        tr th {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+    tr {
+        border-top: 1px solid cadetblue !important;
+    }
+
+    th{
+        border: none !important;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none !important;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td a{
+        font-size: 1.2em !important;
+    }
+
+        td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+    .body-content select,input{
+        display: block !important;
+        padding-bottom:1px;
+    }
+
+    .body-content input[type="submit"]{
+        background-color: ButtonFace !important;    
+    }
+        
+}

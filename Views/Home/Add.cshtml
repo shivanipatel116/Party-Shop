@@ -1,0 +1,67 @@
+﻿@model myPartyShop.Models.partyTable
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h3>Add New Record</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="control-label col-md-3">Party Theme</label>
+            <div class="col-md-9">
+                @Html.EditorFor(p => p.partyTheme, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(p => p.partyTheme, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3">Decoration Name</label>
+            <div class="col-md-9">
+                @Html.EditorFor(p => p.partyDecorationName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(p => p.partyDecorationName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3">Decoration Image URL</label>
+            <div class="col-md-9">
+                @Html.EditorFor(p => p.partyDecorationImage, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(p => p.partyDecorationImage, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3">Description</label>
+            <div class="col-md-9">
+                @Html.EditorFor(p => p.partyDecorationDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(p => p.partyDecorationDescription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3">Price</label>
+            <div class="col-md-9">
+                @Html.EditorFor(p => p.partyDecorationPrice, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(p => p.partyDecorationPrice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-9">
+                <input type="submit" value="Add New Decoration" class="btn btn-default" /><br />
+
+            </div>
+        </div>
+        </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
